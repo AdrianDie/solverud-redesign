@@ -1,19 +1,20 @@
 /* ===== Advokatfirmaet Sølverud — redesign =====
-   Farge-lås (kundens egen palett):
-   hvit bakgrunn · nær-svart ink #1A1A1A · grønn aksent #25B15F · grå #737373 · border #E5E5E5 */
+   Premium-justert palett (etter ønske):
+   varm off-white · nær-svart ink #1A1A1A · dyp emerald-aksent #1C5B45 · grå #6f7671 */
 
 :root{
-  --bg:        #ffffff;
-  --paper:     #faf9f7;   /* varm off-white for seksjonsveksling */
-  --ink:       #1a1a1a;
-  --ink-soft:  #3d3d3d;
-  --muted:     #737373;
-  --line:      #e7e6e3;
-  --accent:    #25b15f;   /* kundens grønn */
-  --accent-dk: #1e9a51;
-  --accent-tint:#eef8f1;
-  --char:      #16211b;   /* dyp koksgrå/grønnstikk footer */
-  --char-soft: #b9c4bd;
+  --bg:        #fdfcfa;   /* varm off-white, ikke stram hvit */
+  --paper:     #f5f3ee;   /* dus varm sand for seksjonsveksling */
+  --ink:       #191c1a;
+  --ink-soft:  #3c433f;
+  --muted:     #6f7671;
+  --line:      #e6e3dc;
+  --accent:    #1c5b45;   /* dyp emerald, dempet og premium */
+  --accent-dk: #123f2f;
+  --accent-tint:#e9efe9;
+  --accent-lite:#7bb193;  /* lysere emerald for grønt på mørk flate */
+  --char:      #141c17;   /* dyp koksgrå/grønnstikk footer */
+  --char-soft: #b3bdb5;
   --radius:    14px;
   --wrap:      1180px;
   --ease:      cubic-bezier(.22,1,.36,1);
@@ -42,8 +43,8 @@ h1,h2,h3,h4{margin:0; font-family:var(--serif); font-weight:500; letter-spacing:
   cursor:pointer; transition:transform .35s var(--ease), background .25s, color .25s, border-color .25s, box-shadow .35s var(--ease);
   min-height:48px;
 }
-.btn--solid{ background:var(--accent); color:#fff; box-shadow:0 8px 22px -12px rgba(37,177,95,.7); }
-.btn--solid:hover{ background:var(--accent-dk); transform:translateY(-2px); box-shadow:0 14px 30px -12px rgba(37,177,95,.75); }
+.btn--solid{ background:var(--accent); color:#fff; box-shadow:0 10px 26px -16px rgba(20,40,30,.55); }
+.btn--solid:hover{ background:var(--accent-dk); transform:translateY(-2px); box-shadow:0 16px 34px -16px rgba(20,40,30,.6); }
 .btn--ghost{ border-color:var(--line); color:var(--ink); background:transparent; }
 .btn--ghost:hover{ border-color:var(--ink); transform:translateY(-2px); }
 .btn--ghost-light{ border-color:rgba(255,255,255,.28); color:#fff; }
@@ -70,7 +71,7 @@ h1,h2,h3,h4{margin:0; font-family:var(--serif); font-weight:500; letter-spacing:
 .topbar__item:hover{ color:#fff; }
 .topbar__sep{ color:var(--char-soft); }
 .topbar__vakt{ margin-left:auto; color:#fff; font-weight:600; }
-.dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px rgba(37,177,95,.25); }
+.dot{ width:7px; height:7px; border-radius:50%; background:#4a8f6f; box-shadow:0 0 0 3px rgba(74,143,111,.28); }
 
 /* ---------- Header ---------- */
 .site-header{
@@ -111,7 +112,7 @@ h1,h2,h3,h4{margin:0; font-family:var(--serif); font-weight:500; letter-spacing:
 .hero{ padding:clamp(52px,8vw,96px) 0 clamp(60px,8vw,104px); position:relative; overflow:hidden; }
 .hero::before{ /* subtil søyle-motiv-glød */
   content:""; position:absolute; top:-10%; right:-6%; width:520px; height:520px;
-  background:radial-gradient(circle, rgba(37,177,95,.10), transparent 68%); z-index:0; pointer-events:none;
+  background:radial-gradient(circle, rgba(28,91,69,.08), transparent 68%); z-index:0; pointer-events:none;
 }
 .hero__grid{ position:relative; z-index:1; display:grid; grid-template-columns:1.25fr .85fr; gap:clamp(30px,5vw,68px); align-items:center; }
 .hero__title{ font-size:clamp(2.5rem,6.6vw,4.5rem); margin:0 0 22px; }
@@ -171,14 +172,14 @@ h1,h2,h3,h4{margin:0; font-family:var(--serif); font-weight:500; letter-spacing:
 .fact:last-child{ border-bottom:1px solid rgba(255,255,255,.14); }
 .fact__label{ display:block; font-size:.76rem; letter-spacing:.14em; text-transform:uppercase; color:var(--char-soft); margin-bottom:6px; }
 .fact__value{ font-family:var(--serif); font-size:1.28rem; color:#fff; }
-a.fact__value:hover{ color:var(--accent); }
+a.fact__value:hover{ color:var(--accent-lite); }
 
 /* ---------- Footer ---------- */
 .footer{ background:#0f1813; color:#c7cfc9; padding:clamp(56px,7vw,88px) 0 34px; }
 .footer__grid{ display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:clamp(28px,4vw,56px); padding-bottom:48px; border-bottom:1px solid rgba(255,255,255,.1); }
 .footer__logo{ height:46px; width:auto; margin-bottom:20px; }
 .footer__tag{ margin:0 0 18px; color:#9aa89f; font-size:.95rem; max-width:34ch; }
-.footer__vakt{ color:var(--accent); font-weight:600; font-size:.95rem; }
+.footer__vakt{ color:var(--accent-lite); font-weight:600; font-size:.95rem; }
 .footer__col h4{ font-family:var(--sans); font-weight:600; font-size:.82rem; letter-spacing:.12em; text-transform:uppercase; color:#fff; margin-bottom:18px; }
 .footer__col ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px; }
 .footer__col li,.footer__col a{ color:#9aa89f; font-size:.96rem; transition:color .2s; }
