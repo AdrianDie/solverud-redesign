@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt oss | Advokatfirmaet Sølverud AS</title>
+  <meta name="description" content="Vi tilbyr gratis og uforpliktende rådgivningssamtale. Kontakt oss i dag for å diskutere din sak." />
+  <meta name="theme-color" content="#1c5b45" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <meta property="og:title" content="Kontakt oss | Advokatfirmaet Sølverud AS" />
+  <meta property="og:description" content="Vi tilbyr gratis og uforpliktende rådgivningssamtale. Kontakt oss i dag for å diskutere din sak." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nb_NO" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+  <div class="topbar"><div class="wrap topbar__inner">
+    <a class="topbar__item" href="tel:32890100"><span class="dot"></span> 32 89 01 00</a>
+    <span class="topbar__sep">Drammen · Bergen</span>
+    <a class="topbar__item topbar__vakt" href="tel:99790293">Vakttelefon 24/7: 997 90 293</a>
+  </div></div>
+  <header class="site-header" id="siteHeader"><div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="Advokatfirmaet Sølverud, forside">
+      <img src="assets/logo-solverud.png" alt="Advokatfirmaet Sølverud AS" class="brand__logo" />
+    </a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="saksomrader.html">Saksområder</a><a href="om-oss.html">Om oss</a><a href="ansatte.html">Ansatte</a><a href="nyheter.html">Nyheter</a><a href="kontakt.html" aria-current="page">Kontakt</a>
+      <a class="btn btn--solid nav-cta" href="kontakt.html">Bestill gratis samtale</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+  </div></header>
+  <div class="drawer" id="mobileMenu" aria-hidden="true">
+    <button class="drawer__close" id="drawerClose" aria-label="Lukk meny">&times;</button>
+    <nav class="drawer__nav" aria-label="Mobilmeny"><a href="index.html">Hjem</a><a href="saksomrader.html">Saksområder</a><a href="om-oss.html">Om oss</a><a href="ansatte.html">Ansatte</a><a href="nyheter.html">Nyheter</a><a href="kontakt.html">Kontakt</a></nav>
+    <div class="drawer__foot">
+      <a class="btn btn--solid" href="kontakt.html">Bestill gratis samtale</a>
+      <a class="drawer__call" href="tel:32890100">Ring 32 89 01 00</a>
+      <a class="drawer__call drawer__call--vakt" href="tel:99790293">Vakttelefon 24/7: 997 90 293</a>
+    </div>
+  </div>
+  <div class="drawer__overlay" id="drawerOverlay"></div><section class="subhero"><div class="wrap">
+      <p class="crumbs reveal"><a href="index.html">Hjem</a> / <span>Kontakt</span></p>
+      <p class="eyebrow reveal">Kontakt</p>
+      <h1 class="subhero__title reveal">Kontakt oss</h1>
+      <p class="subhero__lead reveal">Vi tilbyr gratis og uforpliktende rådgivningssamtale. Kontakt oss i dag for å diskutere din sak.</p>
+    </div></section>
+  <main><section class="section"><div class="wrap"><div class="split" style="grid-template-columns:1.05fr .95fr;gap:clamp(30px,5vw,64px)">
+    <div class="reveal">
+      <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2.2rem)">Send oss en henvendelse</h2>
+      <p style="color:var(--muted);margin:14px 0 26px">Fyll ut skjemaet, så kontakter vi deg så snart som mulig.</p>
+      <form class="form" action="https://formsubmit.co/advokat@solverud.no" method="POST">
+        <input type="hidden" name="_subject" value="Ny henvendelse fra solverud.no">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="form__row two">
+          <div class="form__row"><label for="navn">Navn *</label><input id="navn" name="Navn" required></div>
+          <div class="form__row"><label for="epost">E-post *</label><input id="epost" name="E-post" type="email" required></div>
+        </div>
+        <div class="form__row two">
+          <div class="form__row"><label for="tlf">Telefon *</label><input id="tlf" name="Telefon" type="tel" required></div>
+          <div class="form__row"><label for="kontor">Kontor</label><select id="kontor" name="Kontor"><option>Drammen</option><option>Bergen</option></select></div>
+        </div>
+        <div class="form__row"><label for="sak">Type sak</label><select id="sak" name="Type sak"><option value="">Velg type sak</option><option>Barnerett</option><option>Barnevern</option><option>Arbeidsrett</option><option>NAV-saker</option><option>Strafferett</option><option>Mekling</option><option>Fri rettshjelp</option><option>Annet</option></select></div>
+        <div class="form__row"><label for="besk">Beskrivelse av saken *</label><textarea id="besk" name="Beskrivelse" required></textarea></div>
+        <button class="btn btn--solid" type="submit">Send henvendelse</button>
+        <p class="form__note">* Obligatoriske felt. Vi behandler dine personopplysninger konfidensielt i henhold til våre rutiner for personvern.</p>
+      </form>
+    </div>
+    <div class="reveal">
+      <div class="office" style="margin-bottom:22px"><span class="office__tag">Ring oss direkte</span>
+        <div class="office__row" style="gap:16px">
+          <div><span class="fact__label" style="color:var(--muted)">Hovedtelefon</span><a href="tel:32890100" style="font-family:var(--serif);font-size:1.5rem;color:var(--ink)">32 89 01 00</a></div>
+          <div><span class="fact__label" style="color:var(--muted)">Vakttelefon 24/7</span><a href="tel:99790293" style="font-family:var(--serif);font-size:1.5rem;color:var(--accent-dk)">997 90 293</a><br><span style="font-size:.85rem;color:var(--muted)">Tilgjengelig for akutte saker</span></div>
+          <div><span class="fact__label" style="color:var(--muted)">E-post</span><a href="mailto:advokat@solverud.no">advokat@solverud.no</a></div>
+        </div>
+      </div>
+      <div class="mini"><h3 style="margin-top:0">Gratis førstesamtale</h3><p style="margin-bottom:14px">Vi tilbyr alltid en gratis og uforpliktende samtale hvor vi:</p>
+        <ul class="info-list"><li>Lytter til din situasjon</li><li>Vurderer dine rettigheter</li><li>Forklarer mulige løsninger</li><li>Informerer om kostnader</li><li>Vurderer rett til fri rettshjelp</li></ul></div>
+    </div>
+  </div>
+  <div class="offices reveal" style="margin-top:44px">
+    <div class="office"><span class="office__tag">Hovedkontor</span><h3>Drammen</h3><p>Bragernes Torg 13, 3017 Drammen</p><div class="office__row"><a href="tel:32890100">32 89 01 00</a><a href="mailto:advokat@solverud.no">advokat@solverud.no</a></div></div>
+    <div class="office"><span class="office__tag">Etablert 2009</span><h3>Bergen</h3><p>Sandviksveien 110, 5035 Bergen</p><div class="office__row"><a href="tel:32890100">32 89 01 00</a><a href="mailto:post@solverud.no">post@solverud.no</a></div></div>
+  </div>
+  </div></section></main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__brand">
+        <img src="assets/logo-solverud-white.png" alt="Advokatfirmaet Sølverud AS" class="footer__logo" />
+        <p class="footer__tag">Vi tar deg på alvor. Profesjonell juridisk bistand med mennesket i fokus.</p>
+        <a class="footer__vakt" href="tel:99790293">Vakttelefon 24/7: 997 90 293</a>
+      </div>
+      <div class="footer__col"><h4>Våre tjenester</h4><ul><li><a href='saksomrader.html#barnerett'>Barnerett</a></li><li><a href='saksomrader.html#barnevern'>Barnevern</a></li><li><a href='saksomrader.html#arbeidsrett'>Arbeidsrett</a></li><li><a href='saksomrader.html#nav-saker'>NAV-saker</a></li><li><a href='saksomrader.html#strafferett'>Strafferett</a></li><li><a href='saksomrader.html#mekling'>Mekling</a></li><li><a href='saksomrader.html#fri-rettshjelp'>Fri rettshjelp</a></li></ul></div>
+      <div class="footer__col"><h4>Våre kontorer</h4><ul>
+        <li>Drammen: Bragernes Torg 13, 3017 Drammen</li>
+        <li>Bergen: Sandviksveien 110, 5035 Bergen</li>
+        <li><a href="tel:32890100">32 89 01 00</a></li>
+      </ul></div>
+      <div class="footer__col"><h4>Kontakt oss</h4><ul>
+        <li><a href="mailto:advokat@solverud.no">advokat@solverud.no</a></li>
+        <li><a href="tel:32890100">32 89 01 00</a></li>
+        <li><a href="kontakt.html">Gratis samtale</a></li>
+      </ul></div>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>© 2024 Advokatfirmaet Sølverud AS. Alle rettigheter reservert.</p>
+      <p>Org.nr: 913 669 932 MVA</p>
+      <p class="footer__credit">Nettside levert av <a href="https://dmarketing.no" target="_blank" rel="noopener">Dietrichs Marketing</a></p>
+    </div>
+  </footer>
+  <script src="app.js?v=3"></script>
+</body>
+</html>
